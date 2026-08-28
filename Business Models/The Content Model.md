@@ -53,6 +53,11 @@ mindmap
 
         Datasets
 
+      Broadcast Rights
+        Gap TV
+
+        Gap Radio
+
 ```
 
 International and national sports attract revenues from sportng attendance, attire affiliation, ticket sale and  broadcast rights. 
