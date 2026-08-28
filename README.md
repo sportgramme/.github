@@ -1,5 +1,17 @@
 # sportgramme 
-The fundamental proposition is:
+
+## 3 into 3 — the power of 3
+
+“Sportgramme brings together three core capabilities: **content, data and technology**.
+
+Those three capabilities unlock three distinct commercial models: **subscriptions, syndication and fee-based services**.
+
+And those translate into three complementary revenue streams: **recurring, licensing and transactional revenue**.
+
+The power of the model is that we’re not building three separate businesses. **We’re taking three underlying capabilities and creating three ways to monetise them — with each capability supporting multiple revenue opportunities.**”
+
+
+## The fundamental proposition is:
 
 > **Sportgramme enables creators to create,collaborate and enhance reputation as well as reaching far wider syndicate markets for their content.** 
   
@@ -31,12 +43,14 @@ flowchart TD
     C(Content)
     D(Data)
     T(Technology)
+    N(Syndication)
 
     SUB[Subscription Products]
     FEE[Fee-Based Services]
 
     MRR[Recurring Revenue]
     TR[Transactional Revenue]
+    LR[License Revenue]
 
     S --> C
     S --> D
@@ -47,14 +61,20 @@ flowchart TD
 
     D --> FEE
     T --> FEE
+    C --> N
+
+    N --> LR
+    D --> N
+    D --> LR
 
     SUB --> MRR
     FEE --> TR
+    
 
     class S platform
     class C,D,T domain
-    class SUB,FEE revenue
-    class MRR,TR money
+    class SUB,FEE,N revenue
+    class MRR,TR,LR money
 
     classDef platform fill:#E8EDE3,stroke:#2D3C21,color:#2D3C21,stroke-width:3px;
     classDef domain fill:#FAFBF8,stroke:#556B42,color:#2D3C21;
