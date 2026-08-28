@@ -1,4 +1,13 @@
 # sportgramme 
+The fundamental proposition is:
+
+> **Sportgramme enables creators to create,collaborate and enhance reputation as well as reaching far wider syndicate markets for their content.** 
+  
+> **Sportgramme gives fans a richer, better connected, single view of the sports and athletes they want to follow.**
+  
+> **Sportgramme delivers high quality sports content to syndication partners to distribute trusted, enriched content and data to wider audiences and markets.**
+
+
 ## The single source of truth for world sport data, media, market intelligence, unified and syndicated globally.
 > More than **half** of the world's population engages with sports content. Premium sporting events remain among the largest media audiences ever recorded.
 [Sports Viewership Statistics 2026 (Cometoplay)](https://blog.cometoplay.co.uk/sports-viewership-statistics/)
