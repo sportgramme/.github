@@ -1,5 +1,62 @@
 # Sportgramme — Contributor Journey
 
+
+## Sportgramme — Contributor Ecosystem
+
+```mermaid
+mindmap
+
+  root((Contributor))
+
+    Sportgramme
+      Identity
+      Profile
+      Expertise
+      Portfolio
+      Reputation
+      Credentials
+      Create
+      Collaborate       
+      Enrich
+      Publish
+      Syndicate
+      Local
+      National
+      International
+      Global
+      Monetise
+      Measure
+      Grow
+```
+
+### The underlying model
+
+The important relationship is:
+
+**Contributor → Sportgramme → Everything connected to world sport**
+
+The contributor brings **knowledge, expertise and original content**.
+
+Sportgramme brings the **connection layer**:
+
+> **People + Sports + Organisations + Competitions + Events + Data + Metadata + Content + Audiences + Distribution**
+
+That means a contributor can move from:
+
+**Create → Collaborate → Enrich → Publish → Syndicate → Reach → Monetise → Grow**
+
+without those being separate systems.
+
+They are all connected through **Sportgramme**.
+
+### The strategic proposition
+
+> **Sportgramme connects contributors to the people, information, data, audiences and markets of world sport — enabling them to collaborate, enrich, publish and syndicate their work further and faster than they could independently.**
+---    
+
+
+
+
 | Journey              | Contributor Action                               | Sportgramme Adds                                                                                   | Result                                                                 |
 | -------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | **Join**             | Create a contributor profile                     | Identity, expertise, sports and disciplines                                                        | Professional contributor identity                                      |
