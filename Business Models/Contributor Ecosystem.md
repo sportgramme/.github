@@ -4,26 +4,41 @@
 ## Sportgramme — Contributor Ecosystem
 
 ```mermaid
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "background": "#F7F5EF",
+    "primaryColor": "#2F4A32",
+    "primaryTextColor": "#FFFFFF",
+    "primaryBorderColor": "#233A27",
+    "secondaryColor": "#6F8F68",
+    "secondaryTextColor": "#FFFFFF",
+    "tertiaryColor": "#DCE5D5",
+    "tertiaryTextColor": "#263526",
+    "lineColor": "#6F8068",
+    "fontFamily": "Arial, Helvetica, sans-serif"
+  }
+}}%%
+
 mindmap
-
   root((Contributor))
-
     Sportgramme
       Identity
-      Profile
-      Expertise
-      Portfolio
-      Reputation
-      Credentials
+        Profile
+        Expertise
+        Portfolio
+        Reputation
+        Credentials
       Create
-      Collaborate       
+      Collaborate
       Enrich
       Publish
       Syndicate
-      Local
-      National
-      International
-      Global
+      Reach
+        Local
+        National
+        International
+        Global
       Monetise
       Measure
       Grow
