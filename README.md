@@ -84,5 +84,21 @@ flowchart TD
 ```
 sportgramme is a global concern with the stated aim of holding sports data for all sports competed under  governance or a National governing body affilated with/to an internatonal governing body.
 
- 
+---
 
+## The platform — repository map
+
+The platform is showcased across **four surface repositories** plus this hub.
+Each capability is documented as *As a / I want / So that* briefs with conceptual
+diagrams — described, not disclosed.
+
+| Surface | Repository | What it is |
+|---|---|---|
+| **Web** | [sportgramme-web](https://github.com/sportgramme/sportgramme-web) | Public site, embeddable widgets, contributor tools (authoring, match-day, media, insights) |
+| **API** | [sportgramme-api](https://github.com/sportgramme/sportgramme-api) | Internal API landscape and the syndication / distribution surface |
+| **AWS** | [sportgramme-aws](https://github.com/sportgramme/sportgramme-aws) | Cloud landscape — media pipeline, storage, CDN, delivery / moderation / brokering functions |
+| **On-Prem** | [sportgramme-on-prem](https://github.com/sportgramme/sportgramme-on-prem) | Restricted back office — the platform-wide access-control model and its operator console |
+
+- [**ARCHITECTURE.md**](ARCHITECTURE.md) — how the four surfaces fit together, and why the ~14 former repositories were consolidated
+- [**Conceptual Views**](Conceptual%20Views/) · [**Business Models**](Business%20Models/) · [**Business Intelligence**](Business%20Intelligence/) · [**Value Proposition**](Value%20Proposition.md)
+- [**Glossary**](Glossary/) — shared platform, distribution and analytics terms
