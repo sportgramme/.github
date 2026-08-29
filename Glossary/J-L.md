@@ -2,6 +2,12 @@
 
 **Index:** [A–C](A-C.md) · [D–F](D-F.md) · [G–I](G-I.md) · J–L · [M–O](M-O.md) · [P–R](P-R.md) · [S–U](S-U.md) · [V–Z](V-Z.md) · [about](README.md)
 
+### Just-in-time authorisation
+
+Delivery permission requested one file at a time, at the moment of transfer, and
+short-lived — so there is never a stockpile of reusable upload
+**[permits](P-R.md#permit-upload)** and a leaked one is worthless within moments.
+
 ### Kruskal–Wallis
 
 A rank-based statistical test for whether several groups differ in level. The
