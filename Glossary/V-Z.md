@@ -8,6 +8,14 @@ The outcome of a **[hypothesis](G-I.md#hypothesis)** run: *supported*, *refuted*
 or *inconclusive*, decided by its **[decision rule](D-F.md#decision-rule)**.
 "Inconclusive" is the honest answer when there is not yet enough data.
 
+### Vertical slice
+
+How each capability repository is scoped: the application module *plus* the
+contracts it depends on from the **[Core API](A-C.md#core-api)** and the AWS
+landscape — described alongside the module, not disclosed. One slice per
+capability, so a reader sees the whole of one thing rather than a layer of
+everything.
+
 ### Volatility
 
 How much a price churns — swings back and forth — over a market's life. Measured
