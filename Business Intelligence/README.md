@@ -127,13 +127,12 @@ you are sent the link.
 
 ## Glossary
 
-| Term | Plain meaning |
-|---|---|
-| **Tick data** | every individual change in a bookmaker's price, timestamped to the millisecond |
-| **Market / runner** | a race, and a horse in it |
-| **Volatility** | how much a price swings back and forth — churn, not a one-way drift |
-| **Hypothesis** | a written-down, testable question |
-| **Verdict** | *supported* / *refuted* / *inconclusive*, decided by a rule fixed in advance |
-| **`sg_bi`** | the Postgres area holding analysis-ready data and results |
-| **`LDB3`** | the private on-site SQL Server with the official fixtures and results |
-| **Superset** | the open-source tool that draws the charts |
+Every term used across these docs is defined in the repo-wide
+**[Glossary](../Glossary/)**, split alphabetically (A–C, D–F, …). Quick links:
+[tick data](../Glossary/S-U.md#tick-data) ·
+[hypothesis](../Glossary/G-I.md#hypothesis) ·
+[verdict](../Glossary/V-Z.md#verdict) ·
+[volatility](../Glossary/V-Z.md#volatility) ·
+[sg_bi](../Glossary/S-U.md#sg_bi) ·
+[LDB3](../Glossary/J-L.md#ldb3) ·
+[Superset](../Glossary/S-U.md#superset)
