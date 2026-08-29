@@ -16,7 +16,7 @@ flowchart LR
     R --> P[("Postgres BI store")]
     P --> S["Apache Superset<br/>charts"]
     S --> W["Sportgramme website<br/>result in the right place"]
-    W -. "link + notification" .-> U
+    W -.->|"link + notification"| U
 ```
 
 You send a question. The system turns it into a repeatable analysis, runs it
@@ -29,15 +29,15 @@ the right spot on the site. You get a link when it is ready.
 
 ```mermaid
 flowchart TD
-    subgraph LOCAL["On-site &nbsp;/&nbsp; private"]
-        SS["SQL Server &quot;LDB3&quot;<br/>source of record:<br/>fixtures, runners, results"]
+    subgraph LOCAL ["On site - private"]
+        SS["SQL Server LDB3<br/>source of record<br/>fixtures, runners, results"]
         CAP["Capture files on the NAS<br/>raw betting price ticks"]
     end
-    subgraph NAS["NAS &nbsp;/&nbsp; cloud-reachable"]
-        PG[("Postgres &quot;sg_bi&quot;<br/>analysis-ready facts<br/>+ every result we produce")]
+    subgraph MID ["NAS - cloud reachable"]
+        PG[("Postgres sg_bi<br/>analysis-ready facts<br/>plus every result we produce")]
     end
-    subgraph CLOUD["Cloud-reachable"]
-        SUP["Apache Superset<br/>charts &amp; dashboards"]
+    subgraph TOP ["Cloud reachable"]
+        SUP["Apache Superset<br/>charts and dashboards"]
     end
     WEB["Sportgramme website"]
 
@@ -49,8 +49,8 @@ flowchart TD
 
 | Tier | Holds | Why it is separate |
 |---|---|---|
-| **SQL Server &nbsp;`LDB3`** | the operational truth — fixtures, runners, results | stays on-site and private; analysis never writes to it |
-| **Postgres &nbsp;`sg_bi`** | analysis-ready data and every result we produce | reachable from the cloud, so tools and the website read results here — not from the private database |
+| **SQL Server `LDB3`** | the operational truth — fixtures, runners, results | stays on-site and private; analysis never writes to it |
+| **Postgres `sg_bi`** | analysis-ready data and every result we produce | reachable from the cloud, so tools and the website read results here — not from the private database |
 | **Apache Superset** | the charts people actually look at | cloud-hosted; embeds straight into web pages |
 
 ---
@@ -62,11 +62,11 @@ sequenceDiagram
     actor User as Remote user
     participant BI as BI system
     participant Site as Sportgramme site
-    User->>BI: "Does market volatility change day to day?"
-    BI-->>User: acknowledged — working on it
+    User->>BI: Does market volatility change day to day?
+    BI-->>User: acknowledged, working on it
     Note over BI: picks or writes a hypothesis,<br/>runs it, checks the result<br/>against a fixed decision rule
-    BI->>Site: publish result (chart + verdict)
-    BI-->>User: done — here is the link
+    BI->>Site: publish result (chart plus verdict)
+    BI-->>User: done, here is the link
 ```
 
 Ask, walk away, get told when it lands.
