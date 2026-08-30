@@ -42,3 +42,11 @@ The platform hub — **[sportgramme/sportgramme](https://github.com/sportgramme/
 
 > Every capability is documented as *As a / I want / So that* briefs with
 > conceptual diagrams — what it does and the value it delivers, not its internals.
+
+## Data protection
+
+**[sportgramme/GDPR-Compliance](https://github.com/sportgramme/GDPR-Compliance)** —
+how personal data (the names of people appearing in sports data and news) is kept
+safe: encryption at rest, decrypt-on-demand through a single authorised service,
+right to erasure, and the journalism exemption for editorial free text. Written
+for reviewers and partners — principles and process, no internals.
