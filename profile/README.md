@@ -10,14 +10,26 @@ more than one.
 
 ```mermaid
 flowchart LR
-    A["CREATORS<br/>create + deliver content"] --> B(("SPORTGRAMME<br/>connect + enrich"))
-    B --> C["FANS<br/>consume + engage"]
+    A1["DATA VENDORS<br/>deliver facts+ content"] --> B(("SPORTGRAMME<br/>connect + validate <br/>+ enrich"))
+    A["CREATORS<br/>create + deliver content"] --> B
+    A2["Public domain<br/>historical facts + content"] --> B
+    A3["Social Media<br/>generate trends + content"] --> B
+    B --> K["ACCREDITATIONS<br/>Media Access to events"]
+    A <--> K
+    B --> C["Site Visitors<br/>consume + engage"]
     B --> E["REPORTERS · MEDIA · RESEARCHERS<br/>ADVERTISING AGENCIES · BROADCASTERS"]
     B --> D["SYNDICATE PARTNERS<br/>distribute"]
     D --> F["ADVERTISING AGENCIES · BOOKS<br/>BROADCASTERS"]
+    C --> H["SUBSCRIED"]
+    C --> H1["ANONYMOUS"]
+    H["SUBSCRIBED"] --> H2["PERSONALIED DASHBOARDS <br/> Focus + Follow "]
+    J["EXCLUSIVE<br/>media + content + datasets"] --> A
+    J1["GOVERNING SPORTS BODIES<br/>media + content + datasets"] --> A1
+    J2["OFFICIAL TOURNAMENT <br/>press releases and content"] --> A1
+    J3["OFFICIAL TEAMS <br/>press releases and content"] --> A1
     classDef n fill:#DCE5D5,stroke:#2F4A32,color:#263526,stroke-width:2px;
     classDef c fill:#2F4A32,stroke:#1F3021,color:#FFFFFF,stroke-width:4px;
-    class A,C,D,E,F n; class B c;
+    class A,A1,,A2,A3,C,D,E,F,H,H1,H2,J,J1,J2,J3 n; class B c;
 ```
 
 ## The platform, by surface
@@ -27,6 +39,7 @@ flowchart LR
 | [**sportgramme-web**](https://github.com/sportgramme/sportgramme-web) | The browser surface — public site, embeddable widgets, and the contributor tools for authoring, match-day and media |
 | [**sportgramme-api**](https://github.com/sportgramme/sportgramme-api) | The internal API landscape every surface consumes, and the syndication channels that distribute content to partners |
 | [**sportgramme-aws**](https://github.com/sportgramme/sportgramme-aws) | The cloud landscape — media pipeline, storage, CDN, and the delivery / moderation / brokering functions |
+| [**sportgramme-on-prem**](https://github.com/sportgramme/sportgramme-on-prem) | The restricted back office — the platform-wide access-control model and its operator console |
 | [**sportgramme-on-prem**](https://github.com/sportgramme/sportgramme-on-prem) | The restricted back office — the platform-wide access-control model and its operator console |
 
 ## Dig deeper
