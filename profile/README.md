@@ -10,15 +10,14 @@ more than one.
 
 ```mermaid
 flowchart LR
-    A["CREATORS<br/>create"] --> B(("SPORTGRAMME<br/>connect + enrich"))
+    A["CREATORS<br/>create + deliver content"] --> B(("SPORTGRAMME<br/>connect + enrich"))
     B --> C["FANS<br/>consume + engage"]
-    C --> D["SYNDICATION PARTNERS<br/>distribute"]
-    D --> C
-    D --> A
-    C --> A
+    B --> E["REPORTERS · MEDIA · RESEARCHERS<br/>ADVERTISING AGENCIES · BROADCASTERS"]
+    B --> D["SYNDICATE PARTNERS<br/>distribute"]
+    D --> F["ADVERTISING AGENCIES · BOOKS<br/>BROADCASTERS"]
     classDef n fill:#DCE5D5,stroke:#2F4A32,color:#263526,stroke-width:2px;
     classDef c fill:#2F4A32,stroke:#1F3021,color:#FFFFFF,stroke-width:4px;
-    class A,C,D n; class B c;
+    class A,C,D,E,F n; class B c;
 ```
 
 ## The platform, by surface
