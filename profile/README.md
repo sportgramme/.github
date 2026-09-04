@@ -45,7 +45,7 @@ flowchart LR
 
 The platform hub — **[sportgramme/sportgramme](https://github.com/sportgramme/sportgramme)** — holds:
 
-- [**ARCHITECTURE.md**](https://github.com/sportgramme/sportgramme/blob/main/ARCHITECTURE.md) — how the four surfaces fit together, and why the repositories were consolidated
+- [**ARCHITECTURE.md**](https://github.com/sportgramme/sportgramme/blob/main/architecture/ARCHITECTURE.md) — how the four surfaces fit together, and why the repositories were consolidated
 - [**Value Proposition**](https://github.com/sportgramme/sportgramme/blob/main/Value%20Proposition.md) · [**Business Models**](https://github.com/sportgramme/sportgramme/tree/main/Business%20Models) · [**Business Case**](https://github.com/sportgramme/sportgramme/tree/main/Business%20Case)
 - [**Conceptual Views**](https://github.com/sportgramme/sportgramme/tree/main/Conceptual%20Views) — information flows, content landscape, IT & integration landscape
 - [**Business Intelligence**](https://github.com/sportgramme/sportgramme/tree/main/Business%20Intelligence) — the analytics framework and statistics catalogue
