@@ -50,6 +50,13 @@ providers and tenants at once, spanning everything from daily editorial content
 down to **sub-second, tick-level sporting data**, with full operational
 visibility into every run, every dependency, and every delivery, end to end.
 
+Data protection is not a step bolted on afterwards — **GDPR is applied from the
+instant data lands in our landscape.** Personal identifiers are converted to
+**encrypted fingerprints at the point of ingestion** and carried in that
+protected form through every validation, enrichment and transformation stage
+that follows — raw personal data is never exposed downstream of the moment it
+entered. See [Data protection](#data-protection) below.
+
 ```mermaid
 flowchart LR
     subgraph Ingestion["Ingestion — multi-tenant, high volume"]
@@ -58,7 +65,8 @@ flowchart LR
         I2["Creators"]
         I3["Tick-level sporting data"]
     end
-    Ingestion --> V["Validate + enrich"]
+    Ingestion --> G["Encrypted fingerprint<br/>GDPR applied on entry"]
+    G --> V["Validate + enrich"]
     V --> F[("Federation<br/>one unified, governed dataset")]
     F --> M{{"Scheduling + monitoring<br/>every run audited"}}
     F --> C1["Consumption — web & apps"]
@@ -66,7 +74,8 @@ flowchart LR
     F --> C3["Consumption — analytics & BI"]
     classDef n fill:#DCE5D5,stroke:#2F4A32,color:#263526,stroke-width:2px;
     classDef c fill:#2F4A32,stroke:#1F3021,color:#FFFFFF,stroke-width:4px;
-    class I1,I2,I3,V,C1,C2,C3 n; class F c;
+    classDef g fill:#F5F0E3,stroke:#B89B5E,color:#2D3C21,stroke-width:2px;
+    class I1,I2,I3,V,C1,C2,C3 n; class F c; class G g;
 ```
 
 Described further in **[SgOrchestrator](https://github.com/sportgramme/SgOrchestrator)**
