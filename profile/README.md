@@ -78,6 +78,19 @@ flowchart LR
     class I1,I2,I3,V,C1,C2,C3 n; class F c; class G g;
 ```
 
+**Reaching in from the web, without opening a door.** On-prem has no inbound
+access at all — the engine only ever calls out. A queue sitting in the same
+remote database the website uses lets an admin's click become a run here,
+and status flows back the same way.
+
+```mermaid
+flowchart LR
+    Web["Admin web page"] --> Queue[("Remote trigger queue")]
+    Engine["On-prem engine"] -- "poll (outbound only)" --> Queue
+    Engine -- "mirror status back" --> Queue
+    Queue --> Web
+```
+
 Described further in **[SgOrchestrator](https://github.com/sportgramme/SgOrchestrator)**
 (the scheduling/execution engine) and
 **[FtpQueueMonitor](https://github.com/sportgramme/FtpQueueMonitor)** (its
