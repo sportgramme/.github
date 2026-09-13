@@ -40,7 +40,6 @@ flowchart LR
 | [**sportgramme-api**](https://github.com/sportgramme/sportgramme-api) | The internal API landscape every surface consumes, and the syndication channels that distribute content to partners |
 | [**sportgramme-cloud**](https://github.com/sportgramme/sportgramme-cloud) | The cloud landscape — media pipeline, storage, CDN, and the delivery / moderation / brokering functions |
 | [**sportgramme-on-prem**](https://github.com/sportgramme/sportgramme-on-prem) | The restricted back office — the platform-wide access-control model, its operator console, generative services AI and ML processes|
-| [**SgOrchestrator**](https://github.com/sportgramme/SgOrchestrator) · [**FtpQueueMonitor**](https://github.com/sportgramme/FtpQueueMonitor) | Data ingestion & orchestration — the always-on engine and operator console that schedule, run and monitor every ingestion and transformation pipeline |
 
 ## Ingestion to federation, at scale
 
@@ -79,7 +78,7 @@ operator console) — what it does and why, not its internals.
 
 The platform hub — **[sportgramme/sportgramme](https://github.com/sportgramme/sportgramme)** — holds:
 
-- [**ARCHITECTURE.md**](https://github.com/sportgramme/sportgramme/blob/main/architecture/ARCHITECTURE.md) — how the surfaces fit together, and why the repositories were consolidated
+- [**ARCHITECTURE.md**](https://github.com/sportgramme/sportgramme/blob/main/architecture/ARCHITECTURE.md) — how the four surfaces fit together, and why the repositories were consolidated
 - [**Value Proposition**](https://github.com/sportgramme/sportgramme/blob/main/Value%20Proposition.md) · [**Business Models**](https://github.com/sportgramme/sportgramme/tree/main/Business%20Models) · [**Business Case**](https://github.com/sportgramme/sportgramme/tree/main/Business%20Case)
 - [**Conceptual Views**](https://github.com/sportgramme/sportgramme/tree/main/Conceptual%20Views) — information flows, content landscape, IT & integration landscape
 - [**Business Intelligence**](https://github.com/sportgramme/sportgramme/tree/main/Business%20Intelligence) — the analytics framework and statistics catalogue
