@@ -40,12 +40,46 @@ flowchart LR
 | [**sportgramme-api**](https://github.com/sportgramme/sportgramme-api) | The internal API landscape every surface consumes, and the syndication channels that distribute content to partners |
 | [**sportgramme-cloud**](https://github.com/sportgramme/sportgramme-cloud) | The cloud landscape — media pipeline, storage, CDN, and the delivery / moderation / brokering functions |
 | [**sportgramme-on-prem**](https://github.com/sportgramme/sportgramme-on-prem) | The restricted back office — the platform-wide access-control model, its operator console, generative services AI and ML processes|
+| [**SgOrchestrator**](https://github.com/sportgramme/SgOrchestrator) · [**FtpQueueMonitor**](https://github.com/sportgramme/FtpQueueMonitor) | Data ingestion & orchestration — the always-on engine and operator console that schedule, run and monitor every ingestion and transformation pipeline |
+
+## Ingestion to federation, at scale
+
+Behind the single source of truth is a highly sophisticated **batch-processing
+and monitoring architecture** — not a handful of scheduled scripts. Purpose-built
+pipelines ingest, validate, enrich and federate content and data from many
+providers and tenants at once, spanning everything from daily editorial content
+down to **sub-second, tick-level sporting data**, with full operational
+visibility into every run, every dependency, and every delivery, end to end.
+
+```mermaid
+flowchart LR
+    subgraph Ingestion["Ingestion — multi-tenant, high volume"]
+        direction TB
+        I1["Data vendors"]
+        I2["Creators"]
+        I3["Tick-level sporting data"]
+    end
+    Ingestion --> V["Validate + enrich"]
+    V --> F[("Federation<br/>one unified, governed dataset")]
+    F --> M{{"Scheduling + monitoring<br/>every run audited"}}
+    F --> C1["Consumption — web & apps"]
+    F --> C2["Consumption — syndication partners"]
+    F --> C3["Consumption — analytics & BI"]
+    classDef n fill:#DCE5D5,stroke:#2F4A32,color:#263526,stroke-width:2px;
+    classDef c fill:#2F4A32,stroke:#1F3021,color:#FFFFFF,stroke-width:4px;
+    class I1,I2,I3,V,C1,C2,C3 n; class F c;
+```
+
+Described further in **[SgOrchestrator](https://github.com/sportgramme/SgOrchestrator)**
+(the scheduling/execution engine) and
+**[FtpQueueMonitor](https://github.com/sportgramme/FtpQueueMonitor)** (its
+operator console) — what it does and why, not its internals.
 
 ## Dig deeper
 
 The platform hub — **[sportgramme/sportgramme](https://github.com/sportgramme/sportgramme)** — holds:
 
-- [**ARCHITECTURE.md**](https://github.com/sportgramme/sportgramme/blob/main/architecture/ARCHITECTURE.md) — how the four surfaces fit together, and why the repositories were consolidated
+- [**ARCHITECTURE.md**](https://github.com/sportgramme/sportgramme/blob/main/architecture/ARCHITECTURE.md) — how the surfaces fit together, and why the repositories were consolidated
 - [**Value Proposition**](https://github.com/sportgramme/sportgramme/blob/main/Value%20Proposition.md) · [**Business Models**](https://github.com/sportgramme/sportgramme/tree/main/Business%20Models) · [**Business Case**](https://github.com/sportgramme/sportgramme/tree/main/Business%20Case)
 - [**Conceptual Views**](https://github.com/sportgramme/sportgramme/tree/main/Conceptual%20Views) — information flows, content landscape, IT & integration landscape
 - [**Business Intelligence**](https://github.com/sportgramme/sportgramme/tree/main/Business%20Intelligence) — the analytics framework and statistics catalogue
