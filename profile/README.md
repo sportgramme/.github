@@ -36,10 +36,10 @@ flowchart LR
 
 | Surface | What it is |
 |---|---|
-| [**sportgramme-web**](https://github.com/sportgramme/sportgramme-web) | The browser surface — public site, embeddable widgets, and the contributor tools for authoring, match-day and media |
-| [**sportgramme-api**](https://github.com/sportgramme/sportgramme-api) | The internal API landscape every surface consumes, and the syndication channels that distribute content to partners |
-| [**sportgramme-cloud**](https://github.com/sportgramme/sportgramme-cloud) | The cloud landscape — media pipeline, storage, CDN, and the delivery / moderation / brokering functions |
-| [**sportgramme-on-prem**](https://github.com/sportgramme/sportgramme-on-prem) | The restricted back office — the platform-wide access-control model, its operator console, generative services AI and ML processes|
+| [**sportgramme-front-office**](https://github.com/sportgramme/sportgramme-front-office) | The browser surface — public site, embeddable widgets, and the contributor tools for authoring, match-day and media |
+| [**sportgramme-api-integrations**](https://github.com/sportgramme/sportgramme-api-integrations) | The internal API landscape every surface consumes, the syndication channels that distribute content to partners, and the ingestion/orchestration engines |
+| [**sportgramme-data-model**](https://github.com/sportgramme/sportgramme-data-model) | The logical data models and the cloud landscape — media pipeline, storage, CDN, and the delivery / moderation / brokering functions |
+| [**sportgramme-back-office**](https://github.com/sportgramme/sportgramme-back-office) | The restricted back office — the platform-wide access-control model, its operator console, generative services AI and ML processes, and compliance |
 
 ## Ingestion to federation, at scale
 
@@ -91,10 +91,10 @@ flowchart LR
     Queue --> Web
 ```
 
-Described further in **[SgOrchestrator](https://github.com/sportgramme/SgOrchestrator)**
+Described further in **[sg-orchestrator](https://github.com/sportgramme/sportgramme-api-integrations/tree/main/docs/sg-orchestrator)**
 (the scheduling/execution engine) and
-**[FtpQueueMonitor](https://github.com/sportgramme/FtpQueueMonitor)** (its
-operator console) — what it does and why, not its internals.
+**[ftp-queue-monitor](https://github.com/sportgramme/sportgramme-api-integrations/tree/main/docs/ftp-queue-monitor)** (its
+operator console), both in `sportgramme-api-integrations` — what it does and why, not its internals.
 
 ## Dig deeper
 
@@ -111,7 +111,7 @@ The platform hub — **[sportgramme/sportgramme](https://github.com/sportgramme/
 
 ## Data protection
 
-**[sportgramme/GDPR-Compliance](https://github.com/sportgramme/GDPR-Compliance)** —
+**[sportgramme-back-office/compliance](https://github.com/sportgramme/sportgramme-back-office/tree/main/compliance)** —
 how personal data (the names of people appearing in sports data and news) is kept
 safe: encryption at rest, decrypt-on-demand through a single authorised service,
 right to erasure, and the journalism exemption for editorial free text. Written
