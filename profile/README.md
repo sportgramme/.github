@@ -38,7 +38,7 @@ flowchart LR
 |---|---|
 | [**sportgramme-front-office**](https://github.com/sportgramme/sportgramme-front-office) | The browser surface — public site, embeddable widgets, and the contributor tools for authoring, match-day and media |
 | [**sportgramme-api-integrations**](https://github.com/sportgramme/sportgramme-api-integrations) | The internal API landscape every surface consumes, the syndication channels that distribute content to partners, and the ingestion/orchestration engines |
-| [**sportgramme-data-model**](https://github.com/sportgramme/sportgramme-data-model) | The logical data models and the cloud landscape — media pipeline, storage, CDN, and the delivery / moderation / brokering functions |
+| [**sportgramme-data-model**](https://github.com/sportgramme/sportgramme-data-model) | The logical data models and the schema/procedure reference beneath them |
 | [**sportgramme-back-office**](https://github.com/sportgramme/sportgramme-back-office) | The restricted back office — the platform-wide access-control model, its operator console, generative services AI and ML processes, and compliance |
 
 ## Ingestion to federation, at scale
